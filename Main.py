@@ -10,7 +10,11 @@ with conn:
     );""")
 
 while True:
+<<<<<<< HEAD
     print("\n1. Add flashcards")
+=======
+    print("1. Add flashcards")
+>>>>>>> 26c2eb721d36ed5fb79dc01063d9ecc6535dfca4
     print("2. Practice flashcards")
     print("3. Exit")
     choice = str(input())
@@ -37,8 +41,13 @@ while True:
     elif choice == "2":
         with conn:
             cards = conn.execute("SELECT * FROM cards").fetchall()
+<<<<<<< HEAD
             if len(cards) == 0:
                 print("\nThere is no flashcard to practice!")
+=======
+            if cards is None:
+                print("There is no flashcard to practice!")
+>>>>>>> 26c2eb721d36ed5fb79dc01063d9ecc6535dfca4
             else:
                 for card in cards:
                     print("\nQuestion: {}".format(card[0]))
